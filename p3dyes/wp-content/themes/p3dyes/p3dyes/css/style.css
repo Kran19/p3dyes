@@ -1,0 +1,520 @@
+body { font-family:var(--primary-font-family);}
+
+html{height:100%; margin-bottom:0px;}
+
+* { margin: 0; padding: 0; outline: 0; }
+
+/*custom scrollbar*/
+/* width */
+::-webkit-scrollbar {width:10px;}
+/* Track */
+::-webkit-scrollbar-track {background:var(--bs-secondary); }
+/* Handle */
+::-webkit-scrollbar-thumb {background:var(--bs-dark); }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background:var(--bs-primary); }
+/*custom scrollbar*/
+
+/*LOADER*/
+.no-js #loader { display: none;}
+.js #loader {display: block; position: absolute; left: 100px; top: 0;}
+.se-pre-con {position: fixed; left: 0px; top:0px; width: 100%; height: 100%; z-index: 99999; background: url(../images/Preloader.gif) center no-repeat var(--bs-white);}
+/*LOADER*/
+
+/*TEXT SELECTION*/
+::-moz-selection {/* Code for Firefox */ color:var(--bs-white); background:var(--bs-primary);}
+::selection {color:var(--bs-white); background:var(--bs-primary);}
+/*TEXT SELECTION*/
+
+h1, h2, h3, h4, h5 { font-family:var(--primary-font-family); font-weight:800; letter-spacing:1px; text-transform:uppercase;}
+
+.heading { position: relative;  }
+.heading h1 {font-size:40px; line-height:45px; color:var(--bs-primary);}
+.heading h2 {font-size:32px; line-height:40px; color:var(--bs-secondary);}
+.heading h3 {font-size:15px; line-height: 25px; color:var(--bs-secondary);}
+.heading h4 {font-size:18px; line-height:25px; color:var(--bs-dark);}
+.heading h5 {font-size:20px; line-height:25px; color:var(--bs-black);}
+.heading h6 {font-size:16px; line-height:25px; color:var(--bs-dark); text-transform: capitalize; font-weight:600; letter-spacing:1px; }
+
+p { color:var(--bs-dark); font-size:14px; line-height:22px; font-weight:500; letter-spacing:.5px;}
+p a {color:var(--bs-secondary); font-weight:600;}
+p a:hover {color:var(--bs-primary); }
+p span {color:var(--bs-primary); font-weight:600;}
+p strong {color:var(--bs-secondary); font-weight:700;}
+
+p:last-child {margin-bottom: 0;}
+
+/*HEADER*/
+header {position: fixed; top: 0px; display: flex; align-items: center; z-index: 111; justify-content: space-between; width: 100%; padding:0; background-color: rgba(255, 255, 255, .95); transition: padding 300ms ease;-webkit-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1); box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1); border-top: 10px solid var(--bs-primary)}
+header.sticky-top { }
+
+/*LOGO*/
+.logo { float:left; margin:1rem 0; padding:0; display:block;}
+.logo img { height:100px;}
+/*LOGO*/
+
+.header-right { float: right; margin-top: 1rem;}
+
+/*CALL NOW*/
+.call-now { display:block; margin-bottom:1rem; }
+.call-now ul {  margin:0; padding:0; list-style:none;}
+.call-now ul li { display:inline-block; font-size:14px; color:var(--bs-black); line-height:35px; margin:0 15px 0 0; padding: 0; font-weight:500; letter-spacing:.5px;}
+.call-now ul li:last-child { margin-right:0;}
+.call-now ul li a { color:var(--bs-black); transition:all ease .6s;-moz-transition:all ease .6s;-webkit-transition:all ease .6s;-o-transition:all ease .6s;}
+.call-now ul li a:hover {color:var(--bs-primary); transition:all ease .6s;-moz-transition:all ease .6s;-webkit-transition:all ease .6s;-o-transition:all ease .6s;}
+.call-now ul li i {width:35px; height:35px; line-height:35px; text-align: center; background: var(--bs-primary); color:var(--bs-white); margin-right:5px; font-size:11px; }
+/*CALL NOW*/
+/*HEADER*/
+
+/*FIX CONTACT BTN*/ 
+.connect-now {position: fixed; top:150px; left:1rem; z-index:9;}
+.connect-now ul {}
+.connect-now ul li {margin-bottom:0.75rem; width:35px;}
+.connect-now ul li a i { text-align:center; padding:0; height:35px; line-height:35px; width:35px; border:none; background:var(--bs-primary); font-size:12px; color:var(--bs-white); transition:all ease .6s;-moz-transition:all ease .6s;-webkit-transition:all ease .6s;-o-transition:all ease .6s;}
+.connect-now ul li a:hover i { background:var(--bs-black); color:var(--bs-white); transition:all ease .6s;-moz-transition:all ease .6s;-webkit-transition:all ease .6s;-o-transition:all ease .6s;}
+.connect-now h6 {text-orientation: inherit; writing-mode: vertical-lr; transform: rotate(180deg); display: inline-block; margin-top:0; text-transform:uppercase; font-size:14px; font-weight: 600; letter-spacing:.5px; line-height:35px; margin-left:0; color:var(--bs-secondary);}
+/*FIX CONTACT BTN*/
+
+.img-box{position:relative; overflow: hidden; border-radius:25px 100px 25px 25px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
+.section-bg {background: var(--bs-light);}
+
+/*OUR PRODUCTS*/
+.service-box{position:relative; overflow: hidden; border-radius:25px 100px 25px 25px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
+.service-box:after {content:""; width:100%; height:100%; background:rgba(0,0,0,.6); position:absolute; top:0; left:0; opacity:0; transition:all .5s ease 0s;}
+.service-box:hover:after{opacity:1}
+.service-box img{width:100%;height:auto;transition:all 1.5s ease 0s}
+.service-box .box-content,.service-box .icon li a{position:absolute;transition:all .6s ease 0s}
+.service-box:hover img{transform:scale(1.2)}
+.service-box .box-content{width:100%; background:rgba(235,68,17,.9);bottom:-100px;left:0;z-index:1}
+.service-box:hover .box-content{bottom:0}
+.service-box .title{font-size:20px; line-height:30px; color:var(--bs-white); margin-top:0}
+.service-box .post{display:block;font-size:14px; line-height: 20px; font-weight:600; text-transform:uppercase; color:var(--bs-black);}
+/*OUR PRODUCTS*/
+
+/*WHY CHOOSE US*/
+.why-choose-us {position: relative;} 
+.why-choose-us ul { list-style:none; margin-bottom: 0;} 
+.why-choose-us ul li {} 
+.why-choose-us .why-choose-us-img, .why-choose-us .why-choose-us-info {display: table-cell; vertical-align:top;} 
+.why-choose-us .why-choose-us-info {padding-left:15px;}
+.why-choose-us .why-choose-us-img i { font-size:25px; width:70px; height:70px; line-height:70px; text-align: center;  background: var(--bs-primary); color:var(--bs-white); overflow: hidden;}	
+.why-choose-us .why-choose-us-info h5 {margin:0; padding:0; color: var(--bs-black); font-size:18px; line-height:25px; text-transform: uppercase;} 
+.why-choose-us li .why-choose-us-info p { color: var(--bs-secondary); margin: 0; margin-bottom: 0; } 
+/*WHY CHOOSE US*/
+
+/*HOME FORM*/
+.home-form-section {position: relative; background: var(--bs-black);}
+.home-form-section::before {content: ''; position: absolute; top: 0; right: 0; border-top:60px solid var(--bs-white); border-left:60px solid var(--bs-black);width: 0;}
+.home-form-section .heading h1, .home-form-section .heading h3 {color:var(--bs-white);}
+.home-form-section p {color:var(--bs-gray-100); margin-bottom: 0;}
+/*HOME FORM*/
+
+/*CONTACT INFO*/ 
+.contact-info-style-one {background: var(--bs-primary)}
+.contact-info-style-one .heading h1 {color:var(--bs-white);}
+.contact-info-style-one p {color:var(--bs-gray-100); margin-bottom: 0;}
+
+.contact-info-style-one .contact-no {position: relative;} 
+.contact-info-style-one .contact-no ul { list-style:none;} 
+.contact-info-style-one .contact-no ul li {}  
+.contact-info-style-one .contact-no .icon, .contact-info-style-one .contact-no .info {display: table-cell; vertical-align:middle;} 
+.contact-info-style-one .contact-no .info {padding-left:15px;}
+.contact-info-style-one .contact-no .icon i {color:var(--bs-primary); font-size:30px; height:80px; line-height:80px; text-align: center; width:80px; background:var(--bs-gray-100); }	
+.contact-info-style-one .contact-no .info h5 {font-weight:700; color: var(--bs-white); font-size:14px; letter-spacing:.5px; line-height:20px; text-transform:uppercase;} 
+.contact-info-style-one .contact-no li .info p { color:var(--bs-gray-100); font-weight:800; font-size:20px; line-height:30px; letter-spacing: .5px;} 
+.contact-info-style-one .contact-no li .info p a {color:var(--bs-gray-100); font-weight:800;}
+.contact-info-style-one .contact-no li .info p a:hover { color:var(--bs-white);}
+/*CONTACT INFO*/
+
+/*FOOTER CSS*/ 
+#footer-1 { position: relative; background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: center center; background-image:url(../images/footer-bg.jpg);  overflow: hidden;}
+#footer-1::before {position: absolute; content: ''; left: 0px; top: 0px; width: 100%; height: 100%; background-color: var(--bs-black); opacity: .8;}
+
+#footer-1 h6 { font-size:20px; line-height:30px; color: var(--bs-white); font-weight:800; font-family:var(--primary-font-family); letter-spacing:1px; text-transform:uppercase; font-style:normal; position:relative;}
+
+/*FOOTER NAV*/
+.footer-nav {position: relative;}
+.footer-nav ul {list-style:none; display: block;}
+.footer-nav ul li { display:block;}
+.footer-nav ul li a {color:var(--bs-gray-100); font-weight:500; font-size:14px; line-height:20px; letter-spacing: .5px; text-transform:capitalize;}
+.footer-nav ul li a:hover {color:var(--bs-primary); text-decoration:none;}
+/*FOOTER NAV*/
+
+/*FOOTER-ADDRESS*/
+.footer-address {position: relative;} 
+.footer-address ul { list-style:none;} 
+.footer-address ul li {}  
+.footer-address .icon, .footer-address .info {display: table-cell; vertical-align:top;} 
+.footer-address .info {padding-left:15px;}
+.footer-address .icon i {color:var(--bs-black); font-size:12px; height:35px; line-height:35px; text-align: center; width:35px; background:var(--bs-gray-100); }	
+.footer-address .info h5 {font-weight:700; color: var(--bs-white); font-size:15px; letter-spacing:1px; line-height:30px; text-transform: uppercase;} 
+.footer-address li .info p { color:var(--bs-gray-100); font-weight:500; font-size:14px; line-height:20px; letter-spacing: .5px;} 
+.footer-address li .info p a {color:var(--bs-gray-100); font-weight:500;}
+.footer-address li .info p a:hover { color:var(--bs-primary);}
+/*FOOTER-ADDRESS*/
+/*FOOTER CSS*/
+
+/*FOOTER BOTTOM*/
+.footer-bottom { background-color: var(--bs-black);}
+.footer-bottom p {color:var(--bs-gray-100); font-weight: 500; font-size:13px; line-height:20px; letter-spacing: .5px;}
+.footer-bottom p span {color:var(--bs-white); font-weight:600; font-style:normal;}
+.footer-bottom p a {color:var(--bs-gray-100); font-weight:600;}
+.footer-bottom p a:hover {color:var(--bs-primary);}
+
+/*SOCIAL*/
+.social-links {}
+.social-links ul {list-style-type: none; }
+.social-links ul li {  display: inline-block;}
+.social-links ul li a i { background: var(--bs-gray-100); width:40px; text-align: center; line-height:40px; height:40px; color:var(--bs-black); display: inline-block; font-size:13px; border:none; }
+.social-links ul li a i:hover {color: var(--bs-white); background: var(--bs-primary);}
+/*SOCIAL*/
+
+/*CERTIFICATE LOGO*/
+.certificate-logo { position: relative; float: left; padding:1rem; background: var(--bs-white); border-radius: 1rem;}
+/*CERTIFICATE LOGO*/
+/*FOOTER BOTTOM*/
+
+/*BACK TO TOP*/
+#back-to-top { position: fixed; bottom:60px; right:-10px; display: none; transform: rotate(-90deg); border:none; background: transparent; color: var(--bs-gray-900); width: auto; height: 30px; align-items: center; cursor: pointer; transition:all ease .6s;-moz-transition:all ease .6s;-webkit-transition:all ease .6s;-o-transition:all ease .6s; font-size: 14px; text-transform: uppercase; font-weight:500; letter-spacing:.5px; z-index: 9;}
+#back-to-top:hover{color:var(--bs-primary); transition:all ease .6s;-moz-transition:all ease .6s;-webkit-transition:all ease .6s;-o-transition:all ease .6s;}
+#back-to-top i { transform: rotate(90deg); margin-left: 10px;}
+/*BACK TO TOP*/
+
+/*INNER-BANNER*/
+.inner-page-hero-area {position: relative; background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: center center;}
+.inner-page-hero-area::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(146deg, rgba(0,0,0, 0.85) 35%, rgba(0,0,0, 0.35) 100%);}
+
+.inner-page-title { position: relative; font-size:45px; line-height:50px; text-transform:uppercase; font-weight:800; letter-spacing:1px; color:var(--bs-white); margin-top:0; margin-bottom: 0px;}
+.inner-page-hero-area .breadcrumb-menu { padding:0; margin-bottom:0; margin-top:10px; list-style: none; background: none; border-radius:0; }
+.inner-page-hero-area .breadcrumb-menu li {background: transparent none repeat scroll 0 0; display: inline-block; margin:0; padding:10px 0; position: relative; z-index: 1;}
+.inner-page-hero-area .breadcrumb-menu li i {color:var(--bs-white); margin-right: 3px;}
+.inner-page-hero-area .breadcrumb-menu::after {content: ""; height: 100%; left: 0; opacity:0.35; position: absolute; top: 0; width: 100%; z-index: -1; }
+.breadcrumb-menu > li + li::before {color: var(--bs-light); content: "\f111"; font-family: "Font Awesome 6 Free"; font-size: 8px; font-weight:500; padding: 0 10px; position: relative; top: -1px;}
+.inner-page-hero-area .breadcrumb-menu a, .inner-page-hero-area .breadcrumb-menu li {font-weight:600; color:var(--bs-light); text-transform:uppercase; font-size:14px; line-height:20px; margin:0; padding:0; letter-spacing:.5px;}
+.inner-page-hero-area .breadcrumb-menu a:hover {color: var(--bs-primary);}
+.inner-page-hero-area .breadcrumb-menu li.active {color:var(--bs-white);}
+/*INNER-BANNER*/
+
+#map-section {display: block; line-height: 0; position: relative;}
+
+/*CONTACT-PAGE-ADDRESS*/
+.contact-page-address { } 
+.contact-page-address ul {list-style:none; } 
+.contact-page-address ul li {}  
+.contact-page-address .icon, .contact-page-address .info {display: table-cell; vertical-align:top;} 
+.contact-page-address .info {padding-left:15px;}
+.contact-page-address ul li i {color:var(--bs-white); background:var(--bs-black); font-size:14px; height:50px; line-height:50px; text-align: center; width:50px; }	
+.contact-page-address .info h5 {margin:0; padding:0; color: var(--bs-primary); font-size:17px; line-height:25px;} 
+.contact-page-address li .info p {  margin: 0; padding: 0;} 
+.contact-page-address li .info p a {font-weight:500;}
+.contact-page-address li .info p a:hover {}
+/*.contact-page-address ul li:first-child {margin-top:0;}*/
+/*CONTACT-PAGE-ADDRESS*/
+
+/*LEFT MENU*/
+.left-menu-title { float:left; width:100%; margin:0; padding:10px 15px; background:var(--bs-primary); font-size:18px; text-transform:uppercase; line-height:30px; font-weight:800; color:var(--bs-white); letter-spacing:1px;}
+.left-menu {position: sticky; width: 100%; top:10.875rem; float: left;  background: var(--bs-white); border:1px solid var(--bs-light); border-top: none; overflow: hidden;}
+.left-menu ul { float:left; width: 100%; display:block; list-style:none; margin:0; padding:0;}
+.left-menu ul li { float:left; width:100%; margin:0; padding:0; border-top:1px solid var(--bs-light); text-transform:capitalize;}
+.left-menu ul li a { float:left; width:100%; padding:10px 15px; color:var(--bs-black); background: var(--bs-white); font-size:14px; line-height:20px; font-weight:500; letter-spacing:.5px; text-decoration:none; transition:all ease .6s;-moz-transition:all ease .6s;-webkit-transition:all ease .6s;-o-transition:all ease .6s; }
+.left-menu ul li a:hover, .left-menu ul li a.current  {color:var(--bs-white); background:var(--bs-black); transition:all ease .6s;-moz-transition:all ease .6s;-webkit-transition:all ease .6s;-o-transition:all ease .6s;}
+/*LEFT MENU*/
+
+/*TABLE*/
+.table-box-inner { background:var(--bs-white);}
+.table th { font-size:15px; text-transform:uppercase; background:var(--bs-primary); color:var(--bs-white); font-weight:600; letter-spacing:var(--letter-spacing-1); }
+.table td { font-size:14px; line-height: 20px; color:var(--bs-black); font-weight:500; }
+.table td strong {font-weight:600; color: var(--bs-black); }
+.table td span {font-weight:600; color: var(--bs-primary); }
+.table td i { color: var(--bs-primary); margin-right: 5px;}
+.table td a {color:var(--bs-black); font-weight:500;  transition:all ease .6s;-moz-transition:all ease .6s;-webkit-transition:all ease .6s;-o-transition:all ease .6s; }
+.table td a:hover{color: var(--bs-primary); transition:all ease .6s;-moz-transition:all ease .6s;-webkit-transition:all ease .6s;-o-transition:all ease .6s; }
+/*TABLE*/
+
+.line { position: relative; display: block; width: 100%; height: 1px; background:var(--bs-light);}
+
+@media only screen and ( min-width: 1299px) and (max-width: 2399px) {
+
+
+    
+}
+
+
+@media only screen and ( min-width: 768px) and ( max-width: 980px ) {
+   
+/*HEADER*/
+/*LOGO*/
+.logo img { height:70px;}
+/*LOGO*/
+    
+.header-right { margin-top:1.625rem;}    
+/*HEADER*/
+    
+/*OUR PRODUCTS*/
+.service-box .title{font-size:18px; line-height:25px;}
+.service-box .post{font-size:13px; line-height:18px;}
+/*OUR PRODUCTS*/
+    
+/*FOOTER CSS*/ 
+#footer-1 h6 { font-size:20px; line-height:30px;}
+
+/*FOOTER NAV*/
+.footer-nav ul li a {font-size:13px; line-height:18px;}
+/*FOOTER NAV*/
+
+/*FOOTER-ADDRESS*/
+.footer-address .icon i {font-size:12px; height:35px; line-height:35px; width:35px;}	
+.footer-address .info h5 {font-size:14px; line-height:25px;} 
+.footer-address li .info p {font-size:13px; line-height:18px;} 
+/*FOOTER-ADDRESS*/
+/*FOOTER CSS*/ 
+    
+/*LEFT MENU*/
+.left-menu-title { font-size:16px; line-height:25px;}
+.left-menu {top:8.875rem;}
+.left-menu ul li a { padding:7px 15px; font-size:13px; line-height:20px;}
+/*LEFT MENU*/     
+ 
+/*TABLE*/
+.table th { font-size:14px; }
+.table td { font-size:13px; line-height:18px; }
+/*TABLE*/ 
+        
+}
+
+
+@media only screen and ( min-width: 600px) and ( max-width: 765px ) {
+
+.heading h1 {font-size:35px; line-height:40px;}
+.heading h2 {font-size:27px; line-height:35px;}
+.heading h3 {font-size:15px; line-height: 25px;}
+.heading h4 {font-size:17px; line-height:25px;}
+.heading h5 {font-size:18px; line-height:25px;}
+.heading h6 {font-size:15px; line-height:22px;}
+
+p {font-size:13px; line-height:20px; }
+
+/*HEADER*/
+/*LOGO*/
+.logo img { height:70px;}
+/*LOGO*/
+    
+.header-right { margin-top:1.625rem;}    
+/*HEADER*/
+    
+/*OUR PRODUCTS*/
+.service-box .title{font-size:18px; line-height:25px;}
+.service-box .post{font-size:13px; line-height:18px;}
+/*OUR PRODUCTS*/
+    
+/*WHY CHOOSE US*/
+.why-choose-us .why-choose-us-img i { font-size:20px; width:60px; height:60px; line-height:60px; }	
+.why-choose-us .why-choose-us-info h5 {font-size:16px; line-height:25px;} 
+ /*WHY CHOOSE US*/
+    
+/*CONTACT INFO*/ 
+.contact-info-style-one .contact-no .icon i {font-size:24px; height:70px; line-height:70px; width:70px;}	
+.contact-info-style-one .contact-no .info h5 {font-size:14px; line-height:20px;} 
+.contact-info-style-one .contact-no li .info p {font-size:20px; line-height:30px; } 
+/*CONTACT INFO*/
+    
+/*FOOTER CSS*/ 
+#footer-1 h6 { font-size:20px; line-height:30px;}
+
+/*FOOTER NAV*/
+.footer-nav ul li a {font-size:13px; line-height:18px;}
+/*FOOTER NAV*/
+
+/*FOOTER-ADDRESS*/
+.footer-address .icon i {font-size:12px; height:35px; line-height:35px; width:35px;}	
+.footer-address .info h5 {font-size:14px; line-height:25px;} 
+.footer-address li .info p {font-size:13px; line-height:18px;} 
+/*FOOTER-ADDRESS*/
+/*FOOTER CSS*/ 
+    
+/*FOOTER BOTTOM*/
+.footer-bottom p {font-size:12px; line-height:18px;}
+
+/*SOCIAL*/
+.social-links ul li a i { width:35px; line-height:35px; height:35px; font-size:12px;}
+/*SOCIAL*/
+/*FOOTER BOTTOM*/ 
+    
+/*BACK TO TOP*/
+#back-to-top {font-size: 13px;}
+/*BACK TO TOP*/   
+    
+/*INNER-BANNER*/
+.inner-page-title { font-size:40px; line-height:45px;}
+.breadcrumb-menu > li + li::before {font-size:7px;}
+.inner-page-hero-area .breadcrumb-menu a, .inner-page-hero-area .breadcrumb-menu li {font-size:13px; line-height:20px;}
+/*INNER-BANNER*/   
+    
+/*CONTACT-PAGE-ADDRESS*/
+.contact-page-address ul li i {font-size:13px; height:40px; line-height:40px; width:40px; }	
+.contact-page-address .info h5 {font-size:16px; line-height:22px;} 
+/*CONTACT-PAGE-ADDRESS*/ 
+    
+/*TABLE*/
+.table th { font-size:14px; }
+.table td { font-size:13px; line-height:18px; }
+/*TABLE*/     
+}
+
+
+@media only screen and ( min-width: 481px) and ( max-width: 599px ) {
+    
+.heading h1 {font-size:30px; line-height:35px;}
+.heading h2 {font-size:25px; line-height:30px;}
+.heading h3 {font-size:14px; line-height: 20px;}
+.heading h4 {font-size:16px; line-height:22px;}
+.heading h5 {font-size:16px; line-height:22px;}
+.heading h6 {font-size:14px; line-height:20px;}
+
+p {font-size:13px; line-height:20px; }
+    
+/*HEADER*/
+/*LOGO*/
+.logo img { height:50px;}
+/*LOGO*/
+    
+.header-right { margin-top:1rem;}    
+/*HEADER*/
+    
+/*OUR PRODUCTS*/
+.service-box .title{font-size:16px; line-height:24px;}
+.service-box .post{font-size:13px; line-height:18px;}
+/*OUR PRODUCTS*/
+    
+/*WHY CHOOSE US*/
+.why-choose-us .why-choose-us-img i { font-size:16px; width:45px; height:45px; line-height:45px; }	
+.why-choose-us .why-choose-us-info h5 {font-size:15px; line-height:20px;} 
+/*WHY CHOOSE US*/
+    
+/*CONTACT INFO*/ 
+.contact-info-style-one .contact-no .icon i {font-size:20px; height:50px; line-height:50px; width:50px;}	
+.contact-info-style-one .contact-no .info h5 {font-size:14px; line-height:20px;} 
+.contact-info-style-one .contact-no li .info p {font-size:20px; line-height:30px; } 
+/*CONTACT INFO*/    
+    
+/*FOOTER CSS*/ 
+#footer-1 h6 { font-size:18px; line-height:25px;}
+
+/*FOOTER NAV*/
+.footer-nav ul li a {font-size:13px; line-height:18px;}
+/*FOOTER NAV*/
+
+/*FOOTER-ADDRESS*/
+.footer-address .icon i {font-size:11px; height:30px; line-height:30px; width:30px;}	
+.footer-address .info h5 {font-size:14px; line-height:25px;} 
+.footer-address li .info p {font-size:13px; line-height:18px;} 
+/*FOOTER-ADDRESS*/
+/*FOOTER CSS*/ 
+    
+/*FOOTER BOTTOM*/
+.footer-bottom p {font-size:12px; line-height:18px;}
+
+/*SOCIAL*/
+.social-links ul li a i { width:30px; line-height:30px; height:30px; font-size:11px;}
+/*SOCIAL*/
+/*FOOTER BOTTOM*/   
+    
+/*BACK TO TOP*/
+#back-to-top {font-size: 13px;}
+/*BACK TO TOP*/ 
+    
+/*INNER-BANNER*/
+.inner-page-title { font-size:35px; line-height:40px;}
+.breadcrumb-menu > li + li::before {font-size:7px;}
+.inner-page-hero-area .breadcrumb-menu a, .inner-page-hero-area .breadcrumb-menu li {font-size:13px; line-height:20px;}
+/*INNER-BANNER*/ 
+    
+/*CONTACT-PAGE-ADDRESS*/
+.contact-page-address ul li i {font-size:13px; height:40px; line-height:40px; width:40px; }	
+.contact-page-address .info h5 {font-size:15px; line-height:20px;} 
+/*CONTACT-PAGE-ADDRESS*/  
+    
+/*TABLE*/
+.table th { font-size:13px; }
+.table td { font-size:12px; line-height:18px; }
+/*TABLE*/     
+}
+
+
+@media only screen and ( min-width: 320px) and ( max-width: 480px ) {
+
+.heading h1 {font-size:30px; line-height:35px;}
+.heading h2 {font-size:25px; line-height:30px;}
+.heading h3 {font-size:14px; line-height: 20px;}
+.heading h4 {font-size:16px; line-height:22px;}
+.heading h5 {font-size:16px; line-height:22px;}
+.heading h6 {font-size:14px; line-height:20px;}
+
+p {font-size:13px; line-height:20px; }   
+  
+/*HEADER*/
+/*LOGO*/
+.logo img { height:50px;}
+/*LOGO*/
+    
+.header-right { margin-top:1.313rem;}    
+/*HEADER*/
+    
+/*OUR PRODUCTS*/
+.service-box .title{font-size:16px; line-height:24px;}
+.service-box .post{font-size:13px; line-height:18px;}
+/*OUR PRODUCTS*/
+    
+/*WHY CHOOSE US*/
+.why-choose-us .why-choose-us-img i { font-size:16px; width:45px; height:45px; line-height:45px; }	
+.why-choose-us .why-choose-us-info h5 {font-size:15px; line-height:20px;} 
+/*WHY CHOOSE US*/
+    
+/*CONTACT INFO*/ 
+.contact-info-style-one .contact-no .icon i {font-size:20px; height:50px; line-height:50px; width:50px;}	
+.contact-info-style-one .contact-no .info h5 {font-size:14px; line-height:20px;} 
+.contact-info-style-one .contact-no li .info p {font-size:20px; line-height:30px; } 
+/*CONTACT INFO*/ 
+    
+/*FOOTER CSS*/ 
+#footer-1 h6 { font-size:18px; line-height:25px;}
+
+/*FOOTER NAV*/
+.footer-nav ul li a {font-size:13px; line-height:18px;}
+/*FOOTER NAV*/
+
+/*FOOTER-ADDRESS*/
+.footer-address .icon i {font-size:11px; height:30px; line-height:30px; width:30px;}	
+.footer-address .info h5 {font-size:14px; line-height:25px;} 
+.footer-address li .info p {font-size:13px; line-height:18px;} 
+/*FOOTER-ADDRESS*/
+/*FOOTER CSS*/ 
+    
+/*FOOTER BOTTOM*/
+.footer-bottom p {font-size:12px; line-height:18px;}
+
+/*SOCIAL*/
+.social-links ul li a i { width:30px; line-height:30px; height:30px; font-size:11px;}
+/*SOCIAL*/
+/*FOOTER BOTTOM*/ 
+
+/*BACK TO TOP*/
+#back-to-top {font-size: 13px;}
+/*BACK TO TOP*/
+    
+/*INNER-BANNER*/
+.inner-page-title { font-size:35px; line-height:40px;}
+.breadcrumb-menu > li + li::before {font-size:7px;}
+.inner-page-hero-area .breadcrumb-menu a, .inner-page-hero-area .breadcrumb-menu li {font-size:13px; line-height:20px;}
+/*INNER-BANNER*/   
+    
+/*CONTACT-PAGE-ADDRESS*/
+.contact-page-address ul li i {font-size:13px; height:40px; line-height:40px; width:40px; }	
+.contact-page-address .info h5 {font-size:15px; line-height:20px;} 
+/*CONTACT-PAGE-ADDRESS*/   
+    
+/*TABLE*/
+.table th { font-size:13px; }
+.table td { font-size:12px; line-height:18px; }
+/*TABLE*/     
+}
